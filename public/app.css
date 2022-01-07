@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(216, 194, 194);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    margin: 0 auto;
+    background-image: url("https://source.unsplash.com/1600x900/?landscape");
+}
+
+.card{
+    background-color:#441544d0;
+    border-radius: 30px;
+    max-width:420px;
+    width: 100%;
+    padding: 2em;
+    margin: 1em;
+    color: #fff;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    border-radius: 5%;
+    margin: 0 0.5em;
+    border: none;
+    outline: none;
+    background-color: rgb(156, 134, 156);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover{
+background-color:rgb(95, 81, 95);
+}
+
+.searchbar{
+    outline: none;
+    border-radius: 18px;
+    height:1.5em;
+    /* color: rgb(22, 21, 21); */
+    color: #fff;
+    background-color: #6d576dd0;
+    width:calc(100% - 120px);
+}

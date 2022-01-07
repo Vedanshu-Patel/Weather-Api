@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <form method="POST" action="/weath">
+                <input type="text" name="place">
+                <input type="submit"> 
+            </form>
+        </div>
+        <div class="weather">
+
+            <% if(typeof datav == 'undefined'){ %>
+                <h1 style="text-align:center">Search a City!!</h1>
+                <% } else { %>
+                    <h1 class="city"><%= datav.name %></h1>
+                    <div class="longitude">Longitude -<%=  datav.coord.lon%></div>
+                    <div class="latitude">Latitude -<%=  datav.coord.lat%></div>
+                    <div class="temperature"><h1><%= datav.main.temp %>°C</h1></div>
+                    <img class="icon">
+                    <div class="country">Country -<%= datav.sys.country %></div>
+                    <div class="humidity">Humidity -<%= datav.main.humidity%>%</div>
+                    <div class="wind">Wind Speed -<%= datav.wind.speed %>m/s</div>
+                    <div class="pressure">Pressure -<%= datav.main.pressure%></div>
+                <% } %>
+            
+        </div>
+    </div>    
+</body>
+
+</html>
