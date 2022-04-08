@@ -21,7 +21,7 @@ app.get("/", function(req, res) {
 app.post("/weath", function(req, res) {
     let s=req.body.place;
     
-    let xx="https://api.openweathermap.org/data/2.5/weather?units=metric&appid=[apiKey]&q=" +s;
+    let xx="https://api.openweathermap.org/data/2.5/weather?units=metric&appid=5b8b096bda3de770a19c5b78feb7c599&q=" +s;
     request(xx,function(error, response,body) {
         if(!error && response.statusCode==200){
             let parsedData=JSON.parse(body);
