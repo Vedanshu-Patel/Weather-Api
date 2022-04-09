@@ -1,6 +1,6 @@
 let express = require('express');
 let app = express();
-
+const PORT = Process.env.PORT || 3000;
 app.use(express.static("public"));
 
 let request=require('request');
@@ -69,6 +69,6 @@ app.get("*", function(req, res){
     res.send("Wrong!!!");
 });
 
-app.listen(8888, function(){
+app.listen(PORT, function(){
     console.log("Weather App Started!!");
 });
